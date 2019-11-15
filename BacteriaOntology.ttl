@@ -1,0 +1,304 @@
+#################################################################
+###  Generated with the experimental alpha version of the TTL exporter of WebVOWL (version 1.1.3)  http://visualdataweb.de/webvowl/   ###
+#################################################################
+
+@prefix : 		<http://ontology.tib.eu/baco/> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: 		<http://www.w3.org/2002/07/owl#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: 		<http://purl.org/dc/elements/1.1/> .
+@prefix xml: 		<http://www.w3.org/XML/1998/namespace> .
+@prefix wot: 		<http://xmlns.com/wot/0.1/> .
+@prefix vs: 		<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
+@prefix uom: 		<http://purl.obolibrary.org/obo/> .
+@base 			<http://ontology.tib.eu/baco/> .
+
+<http://ontology.tib.eu/baco/> rdf:type owl:Ontology ;
+                               dc:title "Baco"@en;
+                               dc:description "Ontology of Bacteria based on the BacDive data"@en;
+                               owl:versionInfo "0.1"@en;
+                               dc:creator "Javad Chamanara" . 
+#################################################################
+
+###  Property Definitions (Number of Property) 36 ###
+#  --------------------------- Property 0------------------------- 
+:hasCell rdf:type owl:ObjectProperty ;
+         rdfs:label "hasCell"@en; 
+         rdfs:domain :Organism;
+         rdfs:range :Cell . 
+#  --------------------------- Property 1------------------------- 
+:belongsToKingdom rdf:type owl:ObjectProperty ;
+                  rdfs:label "belongsToKingdom"@en; 
+                  rdfs:domain :Phylum;
+                  rdfs:range :Kingdom . 
+#  --------------------------- Property 2------------------------- 
+:belongsToPhylum rdf:type owl:ObjectProperty ;
+                 rdfs:label "belongsToPhylum"@en; 
+                 rdfs:domain :Class;
+                 rdfs:range :Phylum . 
+#  --------------------------- Property 3------------------------- 
+:belongsToClass rdf:type owl:ObjectProperty ;
+                rdfs:label "belongsToClass"@en; 
+                rdfs:domain :Order;
+                rdfs:range :Class . 
+#  --------------------------- Property 4------------------------- 
+:belongsToOrder rdf:type owl:ObjectProperty ;
+                rdfs:label "belongsToOrder"@en; 
+                rdfs:domain :Family;
+                rdfs:range :Order . 
+#  --------------------------- Property 5------------------------- 
+:belongsToFamily rdf:type owl:ObjectProperty ;
+                 rdfs:label "belongsToFamily"@en; 
+                 rdfs:domain :Genus;
+                 rdfs:range :Family . 
+#  --------------------------- Property 6------------------------- 
+:belongsToGenus rdf:type owl:ObjectProperty ;
+                rdfs:label "belongsToGenus"@en; 
+                rdfs:domain :Species;
+                rdfs:range :Genus . 
+#  --------------------------- Property 7------------------------- 
+:hasDomain rdf:type owl:ObjectProperty ;
+           rdfs:label "hasDomain"@en; 
+           rdfs:domain :Organism;
+           rdfs:range :Domain . 
+#  --------------------------- Property 8------------------------- 
+:hasKingdom rdf:type owl:ObjectProperty ;
+            rdfs:label "hasKingdom"@en; 
+            rdfs:domain :Organism;
+            rdfs:range :Kingdom . 
+#  --------------------------- Property 9------------------------- 
+:hasPhylum rdf:type owl:ObjectProperty ;
+           rdfs:label "hasPhylum"@en; 
+           rdfs:domain :Organism;
+           rdfs:range :Phylum . 
+#  --------------------------- Property 10------------------------- 
+:hasClass rdf:type owl:ObjectProperty ;
+          rdfs:label "hasClass"@en; 
+          rdfs:domain :Organism;
+          rdfs:range :Class . 
+#  --------------------------- Property 11------------------------- 
+:hasOrder rdf:type owl:ObjectProperty ;
+          rdfs:label "hasOrder"@en; 
+          rdfs:domain :Organism;
+          rdfs:range :Order . 
+#  --------------------------- Property 12------------------------- 
+:hasFamily rdf:type owl:ObjectProperty ;
+           rdfs:label "hasFamily"@en; 
+           rdfs:domain :Organism;
+           rdfs:range :Family . 
+#  --------------------------- Property 13------------------------- 
+:hasGenus rdf:type owl:ObjectProperty ;
+          rdfs:label "hasGenus"@en; 
+          rdfs:domain :Organism;
+          rdfs:range :Genus . 
+#  --------------------------- Property 14------------------------- 
+:hasSpecies rdf:type owl:ObjectProperty ;
+            rdfs:label "hasSpecies"@en; 
+            rdfs:domain :Organism;
+            rdfs:range :Species . 
+#  --------------------------- Property 15------------------------- 
+:belongsToDomain rdf:type owl:ObjectProperty ;
+                 rdfs:label "belongsToDomain"@en; 
+                 rdfs:domain :Kingdom;
+                 rdfs:range :Domain . 
+#  --------------------------- Property 16------------------------- 
+:hasUnit rdf:type owl:ObjectProperty ;
+         rdfs:label "hasUnit"@en; 
+         rdfs:domain :Trait;
+         rdfs:range uom:UO_0000000 . 
+#  --------------------------- Property 17------------------------- 
+:value rdf:type owl:DatatypeProperty ;
+       rdfs:label "value"@en; 
+       rdfs:domain :Trait;
+       rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 18------------------------- 
+:valueDataType rdf:type owl:DatatypeProperty ;
+               rdfs:label "valueDataType"@en; 
+               rdfs:domain :Trait;
+               rdfs:range xsd:string . 
+#  --------------------------- Property 19------------------------- 
+:hasMorphology rdf:type owl:ObjectProperty ;
+               rdfs:label "hasMorphology"@en; 
+               rdfs:domain :Cell;
+               rdfs:range :Morphology . 
+#  --------------------------- Property 20------------------------- 
+:hasLength rdf:type owl:ObjectProperty ;
+           rdfs:label "hasLength"@en; 
+           rdfs:domain :Morphology;
+           rdfs:range :LengthTrait . 
+#  --------------------------- Property 21------------------------- 
+:value rdf:type owl:DatatypeProperty ;
+       rdfs:label "value"@en; 
+       rdfs:domain :LengthTrait;
+       rdfs:range xsd:double . 
+#  --------------------------- Property 22------------------------- 
+:hasColonyMorphology rdf:type owl:ObjectProperty ;
+                     rdfs:label "hasColonyMorphology"@en; 
+                     rdfs:domain :Colony;
+                     rdfs:range :ColonyMorphology . 
+#  --------------------------- Property 23------------------------- 
+:hasMedium rdf:type owl:ObjectProperty ;
+           rdfs:label "hasMedium"@en; 
+           rdfs:domain :Culture;
+           rdfs:range :Meduim . 
+#  --------------------------- Property 24------------------------- 
+:hasMedium rdf:type owl:ObjectProperty ;
+           rdfs:label "hasMedium"@en; 
+           rdfs:domain :ColonyMorphology;
+           rdfs:range :Meduim . 
+#  --------------------------- Property 25------------------------- 
+:hasOrigin rdf:type owl:ObjectProperty ;
+           rdfs:label "hasOrigin"@en; 
+           rdfs:domain :Cell;
+           rdfs:range :Place . 
+#  --------------------------- Property 26------------------------- 
+:takenFrom rdf:type owl:ObjectProperty ;
+           rdfs:label "takenFrom"@en; 
+           rdfs:domain :Sample;
+           rdfs:range :Place . 
+#  --------------------------- Property 27------------------------- 
+:represents rdf:type owl:ObjectProperty ;
+            rdfs:label "represents"@en; 
+            rdfs:domain :Sample;
+            rdfs:range :Organism . 
+#  --------------------------- Property 28------------------------- 
+:hasProcedure rdf:type owl:ObjectProperty ;
+              rdfs:label "hasProcedure"@en; 
+              rdfs:domain :Enrichment;
+              rdfs:range :Procedure . 
+#  --------------------------- Property 29------------------------- 
+:appliesTo rdf:type owl:ObjectProperty ;
+           rdfs:label "appliesTo"@en; 
+           rdfs:domain :Enrichment;
+           rdfs:range :Sample . 
+#  --------------------------- Property 30------------------------- 
+:hasCulture rdf:type owl:ObjectProperty ;
+            rdfs:label "hasCulture"@en; 
+            rdfs:domain :Enrichment;
+            rdfs:range :Culture . 
+#  --------------------------- Property 31------------------------- 
+:hasComposition rdf:type owl:ObjectProperty ;
+                rdfs:label "hasComposition"@en; 
+                rdfs:domain :Culture;
+                rdfs:range :Composition . 
+#  --------------------------- Property 32------------------------- 
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:label "name"@en; 
+      rdfs:domain :Culture;
+      rdfs:range xsd:string . 
+#  --------------------------- Property 33------------------------- 
+:hasTemperature rdf:type owl:ObjectProperty ;
+                rdfs:label "hasTemperature"@en; 
+                rdfs:domain :Enrichment;
+                rdfs:range :Temperature . 
+#  --------------------------- Property 34------------------------- 
+:hasIsolation rdf:type owl:ObjectProperty ;
+              rdfs:label "hasIsolation"@en; 
+              rdfs:domain :Enrichment;
+              rdfs:range :Isolation . 
+#  --------------------------- Property 35------------------------- 
+:numberofNucleuses rdf:type owl:DatatypeProperty ;
+                   rdfs:label "numberofNucleuses"@en; 
+                   rdfs:domain :Cell;
+                   rdfs:range rdfs:Datatype . 
+###  Class Definitions (Number of Classes) 30 ###
+#  --------------------------- Class  0------------------------- 
+:Organism rdf:type owl:Class; 
+          rdfs:label "Organism"@en . 
+#  --------------------------- Class  1------------------------- 
+:Cell rdf:type owl:Class; 
+      rdfs:label "Cell"@en . 
+#  --------------------------- Class  2------------------------- 
+:Domain rdf:type owl:Class; 
+        rdfs:label "Domain"@en . 
+#  --------------------------- Class  3------------------------- 
+:Kingdom rdf:type owl:Class; 
+         rdfs:label "Kingdom"@en . 
+#  --------------------------- Class  4------------------------- 
+:Phylum rdf:type owl:Class; 
+        rdfs:label "Phylum"@en . 
+#  --------------------------- Class  5------------------------- 
+:Class rdf:type owl:Class; 
+       rdfs:label "Class"@en . 
+#  --------------------------- Class  6------------------------- 
+:Order rdf:type owl:Class; 
+       rdfs:label "Order"@en . 
+#  --------------------------- Class  7------------------------- 
+:Family rdf:type owl:Class; 
+        rdfs:label "Family"@en . 
+#  --------------------------- Class  8------------------------- 
+:Genus rdf:type owl:Class; 
+       rdfs:label "Genus"@en . 
+#  --------------------------- Class  9------------------------- 
+:Species rdf:type owl:Class; 
+         rdfs:label "Species"@en . 
+#  --------------------------- Class  10------------------------- 
+:Trait rdf:type owl:Class; 
+       rdfs:label "Trait"@en . 
+#  --------------------------- Class  11------------------------- 
+uom:UO_0000000 rdf:type owl:Class; 
+               rdfs:label "Unit"@en . 
+#  --------------------------- Class  12------------------------- 
+:Morphology rdf:type owl:Class; 
+            rdfs:label "Morphology"@en . 
+#  --------------------------- Class  13------------------------- 
+:LengthTrait rdf:type owl:Class; 
+             rdfs:subClassOf :Trait ;
+             rdfs:label "LengthTrait"@en . 
+#  --------------------------- Class  14------------------------- 
+:ColonyMorphology rdf:type owl:Class; 
+                  rdfs:subClassOf :Morphology ;
+                  rdfs:label "ColonyMorphology"@en . 
+#  --------------------------- Class  15------------------------- 
+:Colony rdf:type owl:Class; 
+        rdfs:label "Colony"@en . 
+#  --------------------------- Class  16------------------------- 
+:Culture rdf:type owl:Class; 
+         rdfs:label "Culture"@en . 
+#  --------------------------- Class  17------------------------- 
+:Meduim rdf:type owl:Class; 
+        rdfs:label "Meduim"@en . 
+#  --------------------------- Class  18------------------------- 
+:Place rdf:type owl:Class; 
+       rdfs:label "Place"@en . 
+#  --------------------------- Class  19------------------------- 
+:Unicellular_Organism rdf:type owl:Class; 
+                      rdfs:subClassOf :Organism ;
+                      rdfs:label "Unicellular Organism"@en . 
+#  --------------------------- Class  20------------------------- 
+:Mulricelluar_Organism rdf:type owl:Class; 
+                       rdfs:subClassOf :Organism ;
+                       rdfs:label "Mulricelluar Organism"@en . 
+#  --------------------------- Class  21------------------------- 
+:Prokaryotic_Organism rdf:type owl:Class; 
+                      rdfs:subClassOf :Unicellular_Organism ;
+                      rdfs:label "Prokaryotic Organism"@en . 
+#  --------------------------- Class  22------------------------- 
+:Eukaryotic_Organism rdf:type owl:Class; 
+                     rdfs:subClassOf :Unicellular_Organism ;
+                     rdfs:label "Eukaryotic Organism"@en . 
+#  --------------------------- Class  23------------------------- 
+:Bacrerium rdf:type owl:Class; 
+           rdfs:subClassOf :Prokaryotic_Organism ;
+           rdfs:label "Bacrerium"@en . 
+#  --------------------------- Class  24------------------------- 
+:Sample rdf:type owl:Class; 
+        rdfs:label "Sample"@en . 
+#  --------------------------- Class  25------------------------- 
+:Enrichment rdf:type owl:Class; 
+            rdfs:label "Enrichment"@en . 
+#  --------------------------- Class  26------------------------- 
+:Procedure rdf:type owl:Class; 
+           rdfs:label "Procedure"@en . 
+#  --------------------------- Class  27------------------------- 
+:Composition rdf:type owl:Class; 
+             rdfs:label "Composition"@en . 
+#  --------------------------- Class  28------------------------- 
+:Temperature rdf:type owl:Class; 
+             rdfs:subClassOf :Trait ;
+             rdfs:label "Temperature"@en . 
+#  --------------------------- Class  29------------------------- 
+:Isolation rdf:type owl:Class; 
+           rdfs:label "Isolation"@en . 
