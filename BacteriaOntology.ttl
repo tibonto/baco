@@ -139,15 +139,15 @@
                      rdfs:domain :Colony;
                      rdfs:range :ColonyMorphology . 
 #  --------------------------- Property 23------------------------- 
-:hasMedium rdf:type owl:ObjectProperty ;
-           rdfs:label "hasMedium"@en; 
-           rdfs:domain :Culture;
-           rdfs:range :Meduim . 
+:cultureHasMedium rdf:type owl:ObjectProperty ;
+                  rdfs:label "hasMedium"@en; 
+                  rdfs:domain :Culture;
+                  rdfs:range :Meduim . 
 #  --------------------------- Property 24------------------------- 
-:hasMedium rdf:type owl:ObjectProperty ;
-           rdfs:label "hasMedium"@en; 
-           rdfs:domain :ColonyMorphology;
-           rdfs:range :Meduim . 
+:colonyHasMedium rdf:type owl:ObjectProperty ;
+                 rdfs:label "hasMedium"@en; 
+                 rdfs:domain :ColonyMorphology;
+                 rdfs:range :Meduim . 
 #  --------------------------- Property 25------------------------- 
 :hasOrigin rdf:type owl:ObjectProperty ;
            rdfs:label "hasOrigin"@en; 
@@ -184,10 +184,10 @@
                 rdfs:domain :Culture;
                 rdfs:range :Composition . 
 #  --------------------------- Property 32------------------------- 
-:name rdf:type owl:DatatypeProperty ;
-      rdfs:label "name"@en; 
-      rdfs:domain :Culture;
-      rdfs:range xsd:string . 
+:cultureName rdf:type owl:DatatypeProperty ;
+             rdfs:label "name"@en; 
+             rdfs:domain :Culture;
+             rdfs:range xsd:string . 
 #  --------------------------- Property 33------------------------- 
 :hasTemperature rdf:type owl:ObjectProperty ;
                 rdfs:label "hasTemperature"@en; 
